@@ -14,7 +14,7 @@
             "kazuha\\Phphelp\\Auth\\": "Auth/",
             "Kazuha\\Phphelp\\Pages": "Pages/",
             "Kazuha\\Phphelp\\Routes\\": "Routes/",
-            "Kazuha\\Phphelp\\Routes\\htaccess": "htaccess/"
+            "Kazuha\\Phphelp\\Routes\\htaccess\\": "htaccess/"
         }
     },
     "authors": [
