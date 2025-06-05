@@ -1,0 +1,33 @@
+# /public/.htaccess
+
+RewriteEngine On
+
+# Se for arquivo ou pasta real, serve direto
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Roteia tudo para index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# database/.htaccess
+Order deny,allow
+Deny from all
+
+# database/.htaccess
+Require all denied
+
+# public/.htaccess (com segurança extra)
+RewriteEngine On
+
+# Bloqueia arquivos sensíveis .env, .git, composer.json, etc
+<FilesMatch "\.(env|git|json|lock|xml|phar)$">
+    Require all denied
+</FilesMatch>
+
+# Bloqueia acesso direto a arquivos PHP da pasta /src (se /src ficar dentro do public)
+RewriteRule ^src/ - [F,L]
+
+# Serve arquivos reais direto
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
