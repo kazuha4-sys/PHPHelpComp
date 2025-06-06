@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/seu-usuario/seu-repo/main/logo.png" width="150" alt="Logo do PHPHelp">
+  <img src="https://raw.githubusercontent.com/kazuha4-sys/PHPHelpComp/refs/heads/main/logo.png" width="150" alt="Logo do PHPHelp">
 </p>
 
 <h1 align="center">PHPHelp</h1>
