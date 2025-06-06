@@ -4,7 +4,8 @@
     "type": "project",
     "require": {
         "guzzlehttp/guzzle": "7.9.3",
-        "cboden/ratchet": "0.4.4"
+        "cboden/ratchet": "0.4.4",
+        "symfony/console": "7.4.x-dev"
     },
     "license": "MIT",
     "autoload": {
@@ -17,6 +18,9 @@
             "Kazuha\\Phphelp\\Routes\\htaccess\\": "htaccess/"
         }
     },
+    "bin": [
+        "bin/phphelp"
+    ],
     "authors": [
         {
             "name": "kazuha4-sys",

@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+// Testar se tem um erro no composer ou no composer.json
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+echo "🚀 Iniciando test.php<br>";
+
+require_once __DIR__ . '../../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$app = new Application('PHPHelp CLI', '1.0.0');
+
+// Comanandos disponiveis 
+$app->add(new \Kazuha\Phphelp\Console\Commands\HelloCommand());
+$app->add(new \Kazuha\Phphelp\Console\Commands\MakeControllerCommand());
+$app->add(new \Kazuha\Phphelp\Console\Commands\MakeModelCommand());
+$app->add(new \Kazuha\Phphelp\Console\Commands\RouteListCommand());
+$app->add(new \Kazuha\Phphelp\Console\Commands\MigrateCommand());
+
+$app->run();
+
